@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="card">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="Sign Up.svg" alt="Sign Up">
+                    <h2>Welcome</h2>
+                    <h3>Create your username</h3>
+                    <input spellcheck="false" oninput="checkValid(event)" type="text" placeholder="e.g prajwal" />
+                    <button disabled type="button" onclick="gotoSlide(1)">Next</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="Forgetting Password.svg" alt="Security">
+                    <h2>Security</h2>
+                    <h3>Enter a strong password</h3>
+                    <input oninput="checkValid(event)" type="password" placeholder="Your password" />
+                    <button disabled type="button" onclick="gotoSlide(2)">Next</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="completed.svg" alt="Finish" />
+                    <h2>Finish</h2>
+                    <h3>You're all good to go</h3>
+                    <button class="secondary" onclick="restart()">Restart</button>
+                    <button type="submit">Sign up</button>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
